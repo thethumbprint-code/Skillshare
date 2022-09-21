@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mini Challenge: Generate a Random Number Between 1 and 100</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+</head>
+<body>
+
+<script>
+   // to get a rounded number 1- 100, you actually have to multiply by 101 because it starts as 1 as 0 
+   var Rounded = Math.random() * 101;
+   Rounded = Math.floor(Rounded);
+   document.write("Version 1 of writing this: " + Rounded + "<br>");
+
+
+   document.write("Version 2 of writing this: " + Math.floor(Math.random() * 100) + "<br>"); //simplified the above and to use without a named variable
+
+
+   var NamedVariable = (Math.floor(Math.random() * 100));
+   document.write("Version 3 of writing this: " + NamedVariable + "<br>"); //again, a simplified version, but with a named variable
+
+
+</script>
+
+</body>
+</html>
+
