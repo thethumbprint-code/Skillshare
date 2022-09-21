@@ -3,88 +3,69 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Manipulating Elements</title>
+	<title>Mini Challenge -- Temperature Converter</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
 
     <style>
-      
-      .red {
-        color: mediumvioletred;
-        font-family: 2em;
-      }
-      
-      .blue {
-        color: steelblue;
-        font-family: 2em;
+      .content {
+        border: 1px solid;
+        border-radius: 10px;
+        margin-top: 30px;
+        padding: 20px;
+        background:  #fff;
+        opacity: .85;
       }
 
-      #id1 {
-        font-family: cursive;
+      body {
+        background: linear-gradient(to right, Crimson, BlueViolet, MediumSlateBlue, DeepSkyBlue);
       }
-
     </style>
- </head>
-<body>
-  <h1 id="title" class="pink">Changing HTML elements</h1>
- 
-  <p id="textOne">Text one</p>
-  <p id="textTwo">Text two</p>
 
-  <a href="https://www.w3schools.com/jsref/dom_obj_style.asp">Actual link to a reference sheet for different style elements you can manipulate<br></a>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 text-center content">
+        <h2>Temperature Converter</h2>
+        <form action="">
+          <div class="form-control-sm">
+            <label for="userInput">Enter a number to convert:</label>
+            <input type="number" id="userInput" value="0">
+          </div>
+
+          <div class="form-control-sm">
+            <!-- toCelcius() and toFahrenheit() are both functions that need to be set up in JS -->
+            <input type="button" value="To Celcius" onclick="toCelcius()" class="btn btn-secondary">
+            <input type="button" value="To Fahrenheit" onclick="toFahrenheit()" class="btn btn-secondary">
+          </div>
+        </form>
+
+        <p id="result"></p>
+      </div>
+    </div>
+  </div>
 
 
   <script>
-    //change the element's innerHTML text:
-    document.getElementById("title").innerHTML = "This is the title"; 
 
-    //change the element's style:
-   document.getElementById("title").style.color = "pink"; 
-   document.getElementById("title").style.fontSize = "50px";
+    //so when you click the input type onclick="toCelcius()" above, this function happens
+    function toCelcius() {
+      //document.getElementById("userInput").value <-- this will get the user's input from the form input id="userInput"
+      let celcius = 5 / 9 * (document.getElementById("userInput").value - 32);
+      //rounding the answer to the next whole number:
+      celcius = Math.round(celcius);
+      //putting the result into the p id = "results"
+      document.getElementById("result").innerHTML = userInput.value + "° Fahrenheit is equal to " + celcius + "° Celcius";
+    }
 
-
-    // //I did this just for fun:
-    var link = document.getElementsByTagName("a");
-    link[0].style.color = "DeepSkyBlue"; 
-
-
-
-    //get the class name of an element. step 1 : store it inside an element then call it 
-    var className = document.getElementById("title").className;
-      document.write(className + "<br>");
-
-    //get the id name of an element. step 1 : store it inside an element then call it 
-    var idName = document.getElementById("title").id;
-      document.write(idName);
-
-
-
-    //add id to element
-    var switchId = document.getElementById("textOne").id = "id1";
-
-    //add class to element
-    var switchClassName = document.getElementById("textTwo").className = "red";
-
-
-
-    //create new elements. in ("") goes the name of the element you want to create
-    var newElement = document.createElement("div");
-    //add an id to this newElement
-    newElement.id = "myId";
-
-    var addText = document.createTextNode("new text string"); 
-
-    //to put addText into newElement:
-    newElement.appendChild(addText);
-
-    var newContent = document.getElementById("title"); //this has to be made into a variable to tell the page where to put the new element. This has to be created BEFORE telling the page to insert the new element.
-
-    //this will tell the page where to put it. In the (), 1. (required) content we want to add, (optional) where the new element will be added
-    document.body.insertBefore(newElement, newContent);
-
-
-
-
+    //doing the fahrenheit version 
+    function toFahrenheit() {
+      let fahrenheit = (document.getElementById("userInput").value * 9 / 5) + 32;
+      fahrenheit = Math.round(fahrenheit);
+      document.getElementById("result").innerHTML = userInput.value + "° Celcius is equal to " + fahrenheit + "° Fahrenheit";
+    }    
 
   </script>
 
