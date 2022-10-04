@@ -9,12 +9,13 @@
     <link rel="stylesheet" href="style.css">
     <!-- link to Google Fonts stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 <body>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-12 titleText">
-        <h1>Business Card Designer</h1>
+      <div class="col-sm-12">
+        <h1 class="titleText"><span class="material-symbols-outlined">process_chart</span> Business Card Designer</h1>
       </div>
     </div>
   </div>
@@ -92,13 +93,10 @@
           </div>
         </div>
 
-        <div class="row mb-3">
-          <div class="col-sm-3 offset-sm-3">
+        <div class="row">
+          <div class="col-sm-6 offset-sm-3">
             <input type="submit" onclick="formSubmit()" class="btn btn-secondary" value="Submit">
-          </div>
-
-          <div class="col-sm-3">
-            <input type="button" onclick="formReset()" class="btn btn-secondary" value="Clear">
+            <input type="button" onclick="formReset()" class="btn btn-link" value="Clear">
           </div>
         </div>
       </form>
