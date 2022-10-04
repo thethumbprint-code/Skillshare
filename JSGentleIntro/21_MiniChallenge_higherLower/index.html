@@ -22,12 +22,13 @@
   <div>
   <div class="well text-center">
     <h1>Higher or Lower</h1>
-    <h2>Guess if my random number is higher or less than 5!</h2>
+    <h2>Guess if my random number is higher, equal to, or lower than 5!</h2>
     <p>Range 1-10</p>
     <h3 id="textField"></h3>
     <h6 id="textAnswer"></h6>
 
     <input type="button" class="btn btn-info" value="Higher" onclick="higher()">
+    <input type="button" class="btn btn-info" value="Equal to" onclick="equal()">
     <input type="button" class="btn btn-info" value="Lower" onclick="lower()">
 
   </div>
@@ -39,12 +40,23 @@
 
 <script>
   //random computer generated number between 1-10
-  let RandomNumber = Math.floor(Math.random() * 10) + 1;
+  var RandomNumber = Math.floor(Math.random() * 10) + 1;
 
   //create a function to react when a button is clicked
 
   function higher() {
-    if (RandomNumber >5) {
+    if (RandomNumber > 5) {
+      //this following part will fill in the targeted CSS ID
+      document.getElementById("textField").innerHTML = "You win";
+      document.getElementById("textAnswer").innerHTML = "The random number was " + RandomNumber;
+    } else {
+      document.getElementById("textField").innerHTML = "You lose";
+      document.getElementById("textAnswer").innerHTML = "The random number was " + RandomNumber;
+    }
+  }
+
+  function equal() {
+    if (RandomNumber == 5) {
       //this following part will fill in the targeted CSS ID
       document.getElementById("textField").innerHTML = "You win";
       document.getElementById("textAnswer").innerHTML = "The random number was " + RandomNumber;
@@ -55,7 +67,7 @@
   }
 
   function lower() {
-    if (RandomNumber <=5) {
+    if (RandomNumber < 5) {
       //this following part will fill in the targeted CSS ID
       document.getElementById("textField").innerHTML = "You win";
       document.getElementById("textAnswer").innerHTML = "The random number was " + RandomNumber;
@@ -70,7 +82,7 @@
     window.location.reload();
   }
 
-  // sytax review:
+  // syntax review:
   // alert();
   // var name = blah;
   // function name() {blah;}
