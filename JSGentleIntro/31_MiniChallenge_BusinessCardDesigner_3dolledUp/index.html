@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Business Card Designer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- link to CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- link to Google Fonts stylesheets -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 titleText">
+        <h1>Business Card Designer</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="row container-fluid">
+    <!-- INPUT SECTION -->
+    <div class="col-sm-12 col-md-6">
+
+      <form id="cardInfo" class="background">
+        <div class="row mb-3">
+          <label for="inputCompany" class="col-sm-3 col-form-label">Company Name:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputCompany" onkeyup="printCompany()">
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="inputMessage" class="col-sm-3 col-form-label">Company Message:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputMessage" onkeyup="printMessage()">
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="inputBg" class="col-sm-3 col-form-label">Background Color:</label>
+          <div class="col-sm-9">
+            <input type="color" value="#ffc107" class="form-control" id="inputBg" onchange="changeBg()">
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="inputText" class="col-sm-3 col-form-label">Text Color:</label>
+          <div class="col-sm-9">
+            <input type="color" value="#262626" class="form-control" id="inputText" onchange="changeText()">
+          </div>
+        </div>
+
+        <!-- note the ID is different but the function is the same. See JS for differentiating factors -->
+        <div class="row mb-3">
+          <label class="col-sm-3 col-form-label">Text Align:</label>
+          <div class="col-sm-9">
+            <input type="button" class="btn btn-warning" value="Left" id="text-start" onclick="textAlign(this.id)">
+            <input type="button" class="btn btn-warning" value="Center" id="text-center" onclick="textAlign(this.id)">
+            <input type="button" class="btn btn-warning" value="Right" id="text-end" onclick="textAlign(this.id)">
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="inputName" class="col-sm-3 col-form-label">Your Name:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputName" onkeyup="printName()">
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label for="inputJob" class="col-sm-3 col-form-label">Job Title:</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control" id="inputJob" onkeyup="printJob()">
+          </div>
+        </div>
+
+        <!-- note input type is email for form validation -->
+        <div class="row mb-3">
+          <label for="inputEmail" class="col-sm-3 col-form-label">Email:</label>
+          <div class="col-sm-9">
+            <input type="email" class="form-control" id="inputEmail" onkeyup="printEmail()">
+          </div>
+        </div>
+
+        <!-- note input type is tel for form validation -->
+        <div class="row mb-3">
+          <label for="inputTelephone" class="col-sm-3 col-form-label">Telephone Number:</label>
+          <div class="col-sm-9">
+            <input type="tel" class="form-control" id="inputTelephone" onkeyup="printTelephone()">
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-sm-3 offset-sm-3">
+            <input type="submit" onclick="formSubmit()" class="btn btn-secondary" value="Submit">
+          </div>
+
+          <div class="col-sm-3">
+            <input type="button" onclick="formReset()" class="btn btn-secondary" value="Clear">
+          </div>
+        </div>
+      </form>
+    </div>  
+
+    <!-- OUTPUT SECTION -->
+    <div class="col-sm-12 col-md-6">
+      <div id="card">
+        <h3 id="outputCompany">Company Name</h3>
+        <p id="outputMessage" class="small">Company Message</p>
+        <hr>
+        <p id="outputName" class="small">Your Name</p>
+        <p id="outputJob" class="small">Job Title</p>
+        <p id="outputEmail" class="small">Email:</p>
+        <p id="outputTelephone" class="small">Tel:</p>
+      </div>
+  </div>
+
+
+
+    <!-- link to JS -->
+    <script src="custom.js"></script>
+</body>
+</html>

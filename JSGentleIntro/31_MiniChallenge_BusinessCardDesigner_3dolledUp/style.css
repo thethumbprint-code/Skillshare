@@ -1,0 +1,48 @@
+body {
+	background-color: #90adc6;
+}
+
+h1 {
+	text-align: left;
+	padding: 20px 0;
+}
+
+label {
+	font-weight: bold;
+	text-align: right;
+	color: #90adc6;
+}
+
+
+/* # is id */
+#card {
+	width: 400px;
+	height: 250px;
+	border: 0;
+	padding: 10px;
+ 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ 	background-color:  #FFF;
+}
+
+#outputCompany {
+	font-family: 'Lora', serif;
+	font-weight:  bold;
+}
+
+#outputName {
+	font-weight:  bold;
+	font-size: 16px;
+}
+
+/* . is class */
+.background {
+	background: #E9EAEC;
+	padding: 30px;
+	margin-bottom: 30px;
+}
+
+.titleText {
+	font-family: 'Lora', serif;
+	color: #333652;
+}
+
