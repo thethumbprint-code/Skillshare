@@ -1,0 +1,21 @@
+.featurette-heading {
+    font-size: 3em;
+    padding-top: 8%;
+
+}
+
+.fw-normal {
+    padding-top: 3%;
+}
+
+@media (min-width: 992px) {
+    .nav-item {
+        font-size: .85em;
+    }
+}
+
+@media (min-width: 1200px) { 
+    .nav-item {
+        font-size: 1em;
+    }
+ }

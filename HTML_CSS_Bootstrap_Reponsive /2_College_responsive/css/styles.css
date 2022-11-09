@@ -1,0 +1,191 @@
+/* go to https://necolas.github.io/normalize.css to find latest CSS reset and save as separate style sheet */
+
+html {
+    font-family: 'Vollkorn', serif;
+    font-family: 10px;
+    color: darkslategray;
+}
+
+header {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+h1 {
+    cursor: pointer;
+    font-size: 2rem;
+    /* rem is based on the default text size. e.g. 1rem would be 100% size, 2rem would be twice the reg size. */
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+    /* link color to inherit the same as the html color */
+}
+
+a:hover {
+    color: rgb(104, 114, 166);
+}
+
+ul {
+    list-style: none;
+    /* ^ to remove the bullets from the nav list */
+    padding: 0;
+    display: flex;
+    /* again, flex direction is horizontal by default */
+}
+
+li {
+    font-size: 1.6rem;
+    margin: 0 10px;
+}
+
+img {
+    width: 100%;
+    display:block;
+    /* by default images are inline so there's whitespace below them. display:block will remove that whitespace. */
+}
+
+.apply {
+    /* class use dot */
+    position: relative;
+    /* we have to set this so the absolute positioning below has a point of reference */
+    text-align: center;
+}
+
+.text-overlay {
+    position: absolute;
+    /* this takes this text-overlay section out of the rest of the content. 
+    the top and left will set itself to the closest relative container */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* ^ to reference the div from its center instead of its top left */
+    font-size: 2rem;
+    background: rgba(40, 40, 0, .7);
+    border-radius: 3px;
+    padding: 2rem 10rem;
+    color: rgb(195, 191, 191);
+}
+
+button {
+    background: none;
+    border: 2px solid rgb(169, 252, 169);
+    border-radius: 3px;
+    color: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    border-color: rgb(220, 237, 255);
+    transform: scale(1.05);
+}
+
+.grid-item p {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.grid-item:hover{
+    filter: brightness(.9);
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+h3 {
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+.sports {
+    background: #eee;
+}
+
+.sports-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* ^ these three allow us to set the flex direction vertically and horizontally from the middle of this div*/
+    padding: 2rem 0 0;
+}
+
+.sports-text h3 {
+    font-size: 2.2rem;
+}
+
+.italic {
+    font-size: italic;
+}
+
+footer {
+    text-align: center;
+    background: rgb(62, 61, 61);
+    color: #ddd;
+    padding-bottom: 1rem;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+footer li{
+    padding: 1.6rem 0;
+}
+
+footer p {
+    font-size: 1.6rem;
+}
+
+/* media queries */
+/* have to override or set new ones or else they inherit from above */
+@media(min-width: 900px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        /* ^ this will distribute all of the whitespace in between all of the elements */
+        margin: 10px;
+    }
+
+    .text-overlay {
+        font-size: 2.4rem;
+        padding: 8rem;
+    }
+
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* repeat is a function. fr is a fractional unit which will automatically calculate the width so they're equal */
+        grid-gap: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .grid-item {
+        border: 1px solid lightgray;
+        border-radius: 3px;
+    }
+
+    .grid-item img {
+        border-radius: 3px 3px 0 0;
+    }
+
+    .sports {
+        display: flex;
+    }
+
+    .sports > div {
+        /* ^ selects the child divs */
+        flex: 1;
+        /* ^ this will make it so both are equal */
+    }
+
+    footer ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}

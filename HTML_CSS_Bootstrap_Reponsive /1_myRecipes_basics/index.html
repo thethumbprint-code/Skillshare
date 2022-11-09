@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Recipes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="popular.html">popular</a></li>
+                    <span>&#183;</span>
+                    <li><a href="new.html">what's new</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <a href="index.html"><img src="images/chefs-hat.svg" alt="chef's hat logo"></a>
+            <a href="index.html"><h1>My Recipes</h1></a>
+        </div>
+        <div>
+            <nav>
+                <ul>
+                    <li><a href="submit.html">submit recipes</a></li>
+                    <span>&#183;</span>
+                    <li><a href="meal-ideas.html">meal ideas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="signup">
+        <!-- only use ID once on a page -->
+        <h2>Weekly Recipes to Your Inbox</h2>
+        <h3>Sign up now!</h3>
+        <form>
+            <!-- will not be functional in this course -->
+            <input type="email" aria-label="email" placeholder="Enter your email">
+            <input type="submit">
+        </form>
+    </section>
+
+    <section id="ideas">
+        <div class="relative">
+        <!-- you can use class multiple times -->
+            <img src="images/vegatarian.jpg" alt="veggie section">
+            <h3 class="category-title">Vegetarian</h3>
+        </div>
+        <div class="relative middle">
+        <!-- to add multiple classes, just use a space, not a comma -->
+            <img src="images/quick.jpg" alt="5 min meals">
+            <h3 class="category-title">5 Min Meals</h3>
+        </div>
+        <div class="relative">
+            <img src="images/healthy.jpg" alt="healthy options">
+            <h3 class="category-title">Healthy Options</h3>
+        </div>
+    </section>
+
+    <footer>
+    <!-- "footer" came out in CSS5 -->
+        <img src="images/cutlery.svg" alt="cutlery">
+        <nav>
+            <ul>
+                <li><a href="">About</a></li> 
+                <span>&#183;</span>
+                <li><a href="">Contact</a></li>
+                <span>&#183;</span>
+                <li><a href="">Recipe</a></li>
+                <span>&#183;</span>
+                <li><a href="">Privacy</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+</html> 

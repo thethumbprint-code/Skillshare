@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech College</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+     <!-- custom style sheet should always be the last one in the list so nothing can override it -->
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="index.html">Text College</a>
+
+        </h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="">Login</a>
+                </li>
+                <li>
+                    <a href="">Register</a>
+                </li>
+                <li>
+                    <a href="">Get in Touch</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="apply">
+        <picture>
+            <!-- the picture element uses multiple images of different sizes. See below for media queries e.g. (min-width:1100px) -->
+            <source media="(min-width:1100px)" srcset="images/college.jpg">
+            <img src="images/college-small.jpg" alt="college">  
+            <!-- we have to set a default image with this element, preferably the small one -->
+        </picture>
+
+        <div class="text-overlay">
+            <p>Now Talking Online Applications</p>
+            <button>Apply Here</button>
+
+        </div>
+    </section>
+
+    <section>
+        <h3 class="courses-title">Popular Courses</h3>
+        <div class="courses">
+            <div class="grid-item">
+                <img src="images/law.jpg" alt="law">
+                <p>Law</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/construction.jpg" alt="construction">
+                <p>Construction</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/engineering.jpg" alt="engineering">
+                <p>Engineering</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/science.jpg" alt="science">
+                <p>Science</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/architect.jpg" alt="architect">
+                <p>Architect</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/business.jpg" alt="business">
+                <p>Business</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sports">
+        <div>
+            <img src="images/volleyball.jpg" alt="volleyball">
+        </div>
+        <div class="sports-text">
+            <h3><a href="index.html" class="italic">Discover our new sports facities</a></h3>
+        </div>
+    </section>
+
+    <footer>
+        <h3>Looking for more?</h3>
+        <ul>
+            <li>
+                <a href="">Virtual Tour</a>
+            </li>
+            <li>
+                <a href="">Download Full Guide</a>
+            </li>
+            <li>
+                <a href="">Testimonials</a>
+            </li>
+            <li>
+                <a href="">Book a Session</a>
+            </li>
+        </ul>
+        <p>&copy; Tech College</p>
+    </footer>
+</body>
+</html>
