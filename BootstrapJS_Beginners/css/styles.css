@@ -1,0 +1,128 @@
+body {
+    font-family: Montserrat, "Helvetica Neue", Arial, sans-serif;
+    background-color: rgb(245, 244, 248);
+}
+
+.logo {
+    max-width: 320px;
+}
+
+.heroContainer {
+    background-image: url("../images/holobg4.jpg");
+}
+
+.btn-success {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #78c2ad;
+    --bs-btn-border-color: #78c2ad;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #66a593;
+    --bs-btn-hover-border-color: #609b8a;
+    --bs-btn-focus-shadow-rgb: 140, 203, 185;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #609b8a;
+    --bs-btn-active-border-color: #5a9282;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #78c2ad;
+    --bs-btn-disabled-border-color: #78c2ad;
+}
+
+.nav-link {
+  color: #78c2ad;
+}
+
+.navbar-nav a:hover {
+    color:#66a593;
+}
+
+.navbar-nav .nav-link.active {
+    color: #609b8a;
+    font-weight: 700;
+}
+
+.dropdown-item {
+    color: #609b8a;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: #609b8a;
+}
+
+.navbar-collapse {
+    margin-bottom: -16px;
+    flex-grow: 0;
+}
+
+
+.img-fluid.imgHand {
+    width: 400px; 
+    height: 400px; 
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.cardToppers {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 200px;
+}
+
+.split {
+    justify-content: space-between;
+}
+
+/* Slick  carousel CSS*/
+.slick-prev:before, .slick-next:before {
+    color: #609b8a;
+}
+
+.slick-next:before
+{
+    width: 40px;
+    height: 40px;
+    margin-top: -10px;
+    padding: 0;
+}
+
+.draggable {
+    margin-right: 0.5rem!important;
+    margin-left: 0.5rem!important;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #78c2ad;
+}
+
+a:hover {
+    color: #609b8a;
+}
+
+.babyText {
+    font-size: .9rem;
+    color: #6c757d;
+    font-weight: lighter;
+}
+
+.card {
+    border: 0;
+    box-shadow: 0px 5px 5px lightgray;
+}
+
+.card:hover {
+    box-shadow:  0px 5px 5px 3px lightgray;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-title.text-truncate {
+    color:#78c2ad;
+}
